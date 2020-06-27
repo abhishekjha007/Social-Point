@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".AccountSettingsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_bar_layout_profile"
+        android:background="@android:color/black"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/profile_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@android:color/black">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--<ImageView
+                    android:id="@+id/close_profile_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/close"
+                    />
+
+                <ImageView
+                    android:id="@+id/save_infor_profile_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/save_edited_info"
+                    android:layout_marginRight="10dp"
+                    />-->
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image_view_profile_frag"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/app_bar_layout_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/profile"
+        />
+
+    <TextView
+        android:id="@+id/change_image_text_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_image_view_profile_frag"
+        android:text="Change Image"
+        android:textSize="25dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <EditText
+        android:id="@+id/full_name_profile_frag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_image_text_btn"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:hint="Full name"
+        android:drawableLeft="@drawable/name_image"
+        android:textStyle="italic"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:inputType="text"
+        />
+
+    <EditText
+        android:id="@+id/username_profile_frag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/full_name_profile_frag"
+        android:layout_marginTop="15dp"
+        android:textStyle="italic"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:hint="Username"
+        android:drawableLeft="@drawable/profile_icon"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:inputType="text"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/bio_profile_frag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_profile_frag"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="italic"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:hint="About Me"
+        android:drawableLeft="@drawable/status_image"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:inputType="text"
+        android:textSize="20dp"
+        />
+
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/bio_profile_frag"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Logout"
+        android:layout_alignParentEnd="true"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textStyle="italic"
+        android:textSize="20dp"
+        android:padding="5dp"
+        android:drawableLeft="@drawable/logout_image"
+        android:background="@android:color/darker_gray"
+        />
+
+    <Button
+        android:id="@+id/save_infor_profile_btn"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Save Account"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textStyle="italic"
+        android:textSize="15dp"
+        android:layout_below="@+id/bio_profile_frag"
+        android:layout_alignParentStart="true"
+        android:padding="10dp"
+        android:drawableStart="@drawable/save_edited_info"
+        android:background="@android:color/black"
+        />
+
+</RelativeLayout>
